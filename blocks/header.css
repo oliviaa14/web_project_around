@@ -13,11 +13,13 @@
 
 @media screen and (max-width: 320px) {
   .header {
-    max-width: 300px;
+    width: 300px;
+    margin-bottom: 40px;
   }
 
   .header__logo {
     max-width: 126px;
+    margin-left: 15px;
   }
 }
 
@@ -28,11 +30,16 @@
 
   .header__logo {
     max-width: 126px;
+    margin-left: 15px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .header {
     max-width: 100%;
+  }
+
+  .header__logo {
+    margin-left: 15px;
   }
 }
