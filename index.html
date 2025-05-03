@@ -56,110 +56,7 @@
             />
           </button>
         </section>
-        <section class="cards">
-          <div class="card">
-            <img
-              src="./images/valle.png"
-              alt="imagen de Valle de Yosemite"
-              class="card__image"
-            />
-            <div class="card__info">
-              <h2 class="card__name">Valle de Yosemite</h2>
-              <button class="card__like-button">
-                <img
-                  src="./images/heart.svg"
-                  alt="icono de reacción"
-                  class="card__icon-like"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/lagoLouise.png"
-              alt="imagen del Lago Louise"
-              class="card__image"
-            />
-            <div class="card__info">
-              <h2 class="card__name">Lago Louise</h2>
-              <button class="card__like-button">
-                <img
-                  src="./images/heart.svg"
-                  alt="icono de reacción"
-                  class="card__icon-like"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/montañas.png"
-              alt="imagen de Montañas Calvas"
-              class="card__image"
-            />
-            <div class="card__info">
-              <h2 class="card__name">Montañas Calvas</h2>
-              <button class="card__like-button">
-                <img
-                  src="./images/heart.svg"
-                  alt="icono de reacción"
-                  class="card__icon-like"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/latemar.png"
-              alt="imagen de Latemar"
-              class="card__image"
-            />
-            <div class="card__info">
-              <h2 class="card__name">Latemar</h2>
-              <button class="card__like-button">
-                <img
-                  src="./images/heart.svg"
-                  alt="icono de reacción"
-                  class="card__icon-like"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/vanois.png"
-              alt="imagen de Vanois National"
-              class="card__image"
-            />
-            <div class="card__info">
-              <h2 class="card__name">Vanois National Park</h2>
-              <button class="card__like-button">
-                <img
-                  src="./images/heart.svg"
-                  alt="icono de reacción"
-                  class="card__icon-like"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/braies.png"
-              alt="imagen de Lago di Braies"
-              class="card__image"
-            />
-            <div class="card__info">
-              <h2 class="card__name">Lago di Braies</h2>
-              <button class="card__like-button">
-                <img
-                  src="./images/heart.svg"
-                  alt="icono de reacción"
-                  class="card__icon-like"
-                />
-              </button>
-            </div>
-          </div>
-        </section>
+        <section class="cards"></section>
       </main>
       <footer class="footer">&#169; 2025 Around The U.S.</footer>
       <div class="popup popup_profile">
@@ -192,7 +89,65 @@
           </div>
         </div>
       </div>
+
+      <div class="popup popup_add">
+        <div class="popup__overlay"></div>
+        <div class="popup__content">
+          <button class="popup__close-button">
+            <img
+              src="./images/CloseIcon.svg"
+              alt="boton cerrar"
+              class="popup__close-img"
+            />
+          </button>
+          <div class="popup__body">
+            <form class="form__place">
+              <h3 class="form__title">Nuevo lugar</h3>
+              <input
+                type="text"
+                name="name"
+                class="form__input form__input_name"
+                placeholder="Nombre"
+              />
+              <input
+                type="url"
+                name="link"
+                class="form__input form__input_link"
+                placeholder="www..."
+              />
+              <input type="submit" class="form__submit" value="Crear" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup popup_image">
+        <div class="popup__overlay"></div>
+        <div class="popup__content-image">
+          <button class="popup__close-button">
+            <img
+              src="./images/CloseIcon.svg"
+              alt="boton cerrar"
+              class="popup__close-img"
+            />
+          </button>
+          <div class="popup__body-image">
+            <img src="" alt="" class="popup__image" />
+            <p class="popup__title"></p>
+          </div>
+        </div>
+      </div>
     </div>
+    <template class="template">
+      <div class="card">
+        <button class="card__trash"></button>
+        <img src="" alt="" class="card__image" />
+        <div class="card__info">
+          <p class="card__name"></p>
+          <button class="card__like"></button>
+        </div>
+      </div>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

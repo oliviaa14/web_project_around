@@ -52,7 +52,38 @@
   width: 430px;
 }
 
+.popup__content-image {
+  z-index: 1;
+}
+
+.popup__body-image {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px 0px #00000026;
+}
+
+.popup__image {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.popup__title {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+  width: 290px;
+  margin-top: 10px;
+}
+
 .form {
+  display: flex;
+  gap: 29px;
+  flex-direction: column;
+}
+
+.form__place {
   display: flex;
   gap: 29px;
   flex-direction: column;
@@ -122,5 +153,13 @@
 
   .form__title {
     width: 282px;
+  }
+
+  .popup__body-image {
+    max-width: 240px;
+  }
+
+  .popup__image {
+    max-width: 240px;
   }
 }
