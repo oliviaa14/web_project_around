@@ -5,7 +5,8 @@ const inputName = document.querySelector(".form__input_name");
 const inputAbout = document.querySelector(".form__input_about");
 
 const form = document.querySelector(".form");
-const formPlace = document.querySelector(".form__place");
+const formInput = form.querySelector(".form__input");
+const formPlace = document.querySelector(".form_place");
 const inputNamePlace = formPlace.querySelector(".form__input_name");
 const inputLink = formPlace.querySelector(".form__input_link");
 const profileEditButton = document.querySelector(".profile__edit-button");
@@ -17,6 +18,8 @@ const popupClose = document.querySelector(".popup__close-button");
 
 const popupImage = document.querySelector(".popup_image");
 const popupImageClose = popupImage.querySelector(".popup__close-button");
+
+const popupOverlays = document.querySelectorAll(".popup__overlay");
 
 const cards = document.querySelector(".cards");
 const initialCards = [
@@ -118,4 +121,18 @@ profileAddButton.addEventListener("click", function () {
 
 popupCloseIm.addEventListener("click", function () {
   popupAddPlace.classList.remove("popup_open");
+});
+
+popupOverlays.forEach(function (overlay) {
+  overlay.addEventListener("click", function () {
+    const popup = overlay.closest(".popup");
+    popup.classList.remove("popup_open");
+  });
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    const popup = document.querySelector(".popup_open");
+    popup.classList.remove("popup_open");
+  }
 });
