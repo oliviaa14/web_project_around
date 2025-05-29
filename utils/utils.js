@@ -90,6 +90,7 @@ function openImagePopup(name, link) {
   popupImage.querySelector(".popup__image").src = link;
   popupImage.querySelector(".popup__image").alt = name;
   popupImage.querySelector(".popup__image").textContent = name;
+  popupImage.querySelector(".popup__title").textContent = name;
 }
 
 const configForm = {
