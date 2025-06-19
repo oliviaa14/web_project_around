@@ -1,8 +1,14 @@
-import { openImagePopup } from "../utils/utils.js";
+
 export default class Card {
-  constructor(name, link, templateSelector) {
+  constructor(
+    name,
+    link,
+    templateSelector,
+    { handleCardImageClick, handleCardImageLike, handleCardImageRemove }
+  ) {
     this._name = name;
     this._link = link;
+    this._handleCardImageClick = handleCardImageClick;
     this._templateSelector = templateSelector;
   }
 
@@ -16,7 +22,8 @@ export default class Card {
   }
 
   clickCard() {
-    openImagePopup(this._name, this._link);
+
+    this._handleCardImageClick(this._name, this._link);
   }
 
   _setEventListeners() {

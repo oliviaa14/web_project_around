@@ -1,12 +1,7 @@
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
-
-const popupImage = document.querySelector(".popup_image");
-const popupCloseButtons = Array.from(
-  document.querySelectorAll(".popup__close-button")
-);
-
-const overlays = document.querySelectorAll(".popup__overlay");
+import PopupWithForm from "../components/PopupWithForm.js";
+import PopupWithImage from "../components/PopupWithImage.js";
 
 const formProfile = document.querySelector(".form");
 const formAddImage = document.querySelector(".form_place");
@@ -52,45 +47,14 @@ const popupAddPlace = document.querySelector(".popup_add");
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileAddButton = document.querySelector(".profile__add-button");
 
-function openPopup(popup) {
-  popup.classList.add("popup_open");
-}
-
-function closePopup() {
-  popupImage.classList.remove("popup_open");
-  popupAddPlace.classList.remove("popup_open");
-  popupProfile.classList.remove("popup_open");
-}
-
+const popupImageObj = new PopupWithImage(".popup_image");
 function createElement(name, link) {
-  const card = new Card(name, link, ".template");
+  const card = new Card(name, link, ".template", {
+    handleCardImageClick: (name, link) => {
+      popupImageObj.open(name, link);
+    },
+  });
   return card.render();
-}
-
-popupCloseButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    closePopup();
-  });
-});
-
-overlays.forEach((overlay) => {
-  overlay.addEventListener("click", () => {
-    closePopup();
-  });
-});
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closePopup();
-  }
-});
-
-function openImagePopup(name, link) {
-  openPopup(popupImage);
-  popupImage.querySelector(".popup__image").src = link;
-  popupImage.querySelector(".popup__image").alt = name;
-  popupImage.querySelector(".popup__image").textContent = name;
-  popupImage.querySelector(".popup__title").textContent = name;
 }
 
 const configForm = {
@@ -106,9 +70,6 @@ export {
   initialCards,
   cards,
   createElement,
-  openPopup,
-  closePopup,
-  openImagePopup,
   profileEditButton,
   profileAddButton,
   popupProfile,
