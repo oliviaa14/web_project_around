@@ -187,6 +187,9 @@
 
   .popup__close-button {
     width: 26px;
+    position: absolute;
+    left: 94%;
+    top: -40px;
   }
 
   .form {
@@ -203,11 +206,5 @@
 
   .popup__image {
     max-width: 240px;
-  }
-
-  .popup__close-button {
-    position: absolute;
-    left: 94%;
-    top: -40px;
   }
 }
