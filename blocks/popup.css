@@ -95,11 +95,17 @@
   flex-direction: column;
 }
 
-.form__place {
+/* .form_place {
   display: flex;
   gap: 29px;
   flex-direction: column;
 }
+
+.form_remove {
+  display: flex;
+  gap: 28px;
+  flex-direction: column;
+} */
 
 .form__title {
   max-width: 330px;
@@ -112,6 +118,7 @@
   margin-left: 36px;
   margin-right: 64px;
   margin-top: 34px;
+  margin-bottom: 0;
 }
 
 .form__input {

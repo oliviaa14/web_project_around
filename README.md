@@ -27,23 +27,34 @@ En la quinta parte se añadieron los siguientes módulos de javascript:
 
 Se realizaron los ajustes necesarios para que cada elemento sea independiente, con esto se busca crear módulos que puedan ser reutilizables.
 
-Para este proyecto se utilizaron los siguientes conceptos:
+En la sexta parte se realizaron las siguientes peticiones al servidor:
+-Cargar datos del usuario (Petición GET)
+-Cargar tarjetas (Petición GET)
+-Editar información del perfil del usuario (Petición PATCH)
+-Agregar nuevas tarjetas (Petición POST)
+-Borrar tarjetas (Petición Delete)
+-Poder dar "like" a una trajeta así como eliminar dicho "like" (Peticiones PUT y DELETE)
 
-- HTML 5
-- CSS
-- Flexbox
-- BEM
-- Formularios
-- Diseño responsivo
-- Javascript
-- Validación de formularios
-- Programación orientada a objetos (POO)
-- Clases de Javascript
-- Exportaciones e importaciones en Javascript
-- Métodos públicos y privados de Javascript
-- JavaScript modular
-- Clases Javascript
-- Acoplamiento débil
+- Para este proyecto se utilizaron los siguientes conceptos:
+
+* HTML 5
+* CSS
+* Flexbox
+* BEM
+* Formularios
+* Diseño responsivo
+* Javascript
+* Validación de formularios
+* Programación orientada a objetos (POO)
+* Clases de Javascript
+* Exportaciones e importaciones en Javascript
+* Métodos públicos y privados de Javascript
+* JavaScript modular
+* Clases Javascript
+* Acoplamiento débil
+* Promises
+* Solicitudes al servidor
+* API
 
 El proyecto se puede consultar en el siguiente enlace:
 https://oliviaa14.github.io/web_project_around/
